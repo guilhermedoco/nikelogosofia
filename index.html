@@ -70,10 +70,11 @@
   <section id="contato" class="py-16 bg-white">
     <div class="max-w-xl mx-auto px-4 text-center">
       <h3 class="text-2xl font-bold mb-6">Contato</h3>
-      <form class="space-y-4">
-        <input type="text" placeholder="Nome" class="w-full p-3 border rounded">
-        <input type="email" placeholder="E-mail" class="w-full p-3 border rounded">
-        <textarea placeholder="Mensagem" rows="4" class="w-full p-3 border rounded"></textarea>
+      <form action="https://formsubmit.co/guilhermedoco@gmail.com" method="POST" class="space-y-4">
+        <input type="hidden" name="_next" value="https://www.nikelogosofia.com.br/obrigado.html">
+        <input type="text" name="nome" placeholder="Nome" class="w-full p-3 border rounded" required>
+        <input type="email" name="email" placeholder="E-mail" class="w-full p-3 border rounded" required>
+        <textarea name="mensagem" placeholder="Mensagem" rows="4" class="w-full p-3 border rounded" required></textarea>
         <button class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Enviar</button>
       </form>
     </div>
@@ -82,7 +83,6 @@
   <!-- Rodapé -->
   <footer class="bg-gray-200 text-center py-6 text-sm text-gray-600">
     <p>&copy; 2025 Centro Logosófico Nike. Todos os direitos reservados.</p>
-    
   </footer>
 </body>
 </html>
