@@ -5,84 +5,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Centro de Estudos Logosóficos Nike</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E40AF',
+            accent: '#FACC15'
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-white text-gray-800 font-sans">
   <!-- Cabeçalho -->
-  <header class="bg-white shadow-md">
+  <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
       <div class="flex items-center space-x-2">
         <img src="logo.png" alt="Logo" class="h-10 w-10">
-        <h1 class="text-2xl font-bold">Centro Logosófico Nike</h1>
+        <h1 class="text-2xl font-bold text-primary">Centro Logosófico Nike</h1>
       </div>
-      <nav class="space-x-4">
-        <a href="#inicio" class="text-gray-700 hover:text-blue-600">Início</a>
-        <a href="#quem-somos" class="text-gray-700 hover:text-blue-600">Quem Somos</a>
-        <a href="#logosofia" class="text-gray-700 hover:text-blue-600">Sobre a Logosofia</a>
-        <a href="#atividades" class="text-gray-700 hover:text-blue-600">Atividades</a>
-        <a href="#contato" class="text-gray-700 hover:text-blue-600">Contato</a>
+      <nav class="hidden md:flex space-x-4">
+        <a href="#inicio" class="text-gray-700 hover:text-primary">Início</a>
+        <a href="#quem-somos" class="text-gray-700 hover:text-primary">Quem Somos</a>
+        <a href="#logosofia" class="text-gray-700 hover:text-primary">Logosofia</a>
+        <a href="#atividades" class="text-gray-700 hover:text-primary">Atividades</a>
+        <a href="#contato" class="text-gray-700 hover:text-primary">Contato</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero / Destaque -->
-  <section id="inicio" class="bg-blue-100 py-20 text-center">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-3xl font-semibold mb-4">"A Logosofia é a ciência do saber pensar"</h2>
-      <p class="mb-6">Conheça o Centro de Estudos Logosóficos Nike, em busca da superação consciente.</p>
-      <a href="#quem-somos" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Conheça a Logosofia</a>
+  <section id="inicio" class="h-screen flex items-center justify-center bg-cover bg-center text-white text-center" style="background-image: url('https://source.unsplash.com/1600x900/?light,spiritual');">
+    <div class="bg-black bg-opacity-50 p-8 rounded">
+      <h2 class="text-4xl font-bold mb-4">"A Logosofia é a ciência do saber pensar"</h2>
+      <p class="mb-6">Descubra um caminho consciente de evolução e autoconhecimento.</p>
+      <a href="#quem-somos" class="bg-accent text-gray-900 px-6 py-3 rounded hover:bg-yellow-400 font-semibold">Conheça a Logosofia</a>
     </div>
   </section>
 
   <!-- Quem Somos -->
-  <section id="quem-somos" class="py-16 bg-white">
+  <section id="quem-somos" class="py-20 bg-white">
     <div class="max-w-4xl mx-auto px-4 text-center">
-      <h3 class="text-2xl font-bold mb-4">Quem Somos</h3>
-      <p class="text-gray-700">O Centro de Estudos Logosóficos Nike é um núcleo de formação espiritual, moral e intelectual baseado na Ciência Logosófica, com foco no aperfeiçoamento individual e coletivo, especialmente voltado à formação do caráter desde a infância até a vida adulta.</p>
+      <h3 class="text-3xl font-bold text-primary mb-4">Quem Somos</h3>
+      <p class="text-gray-700 leading-relaxed">O Centro de Estudos Logosóficos Nike é um núcleo voltado à formação espiritual, moral e intelectual baseada na Ciência Logosófica. Buscamos o aperfeiçoamento consciente do ser humano, promovendo a evolução individual e coletiva em todas as etapas da vida.</p>
     </div>
   </section>
 
   <!-- Sobre a Logosofia -->
-  <section id="logosofia" class="py-16 bg-gray-50">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h3 class="text-2xl font-bold mb-4">Sobre a Logosofia</h3>
-      <p class="text-gray-700">A Logosofia é uma ciência e método de evolução consciente criada por Carlos Bernardo González Pecotche. Seu propósito é promover o conhecimento de si mesmo por meio do estudo das leis universais, do mundo mental e do mundo interno do ser humano. Ela propõe uma renovação integral do indivíduo, desenvolvendo faculdades da inteligência, sentimentos superiores e uma consciência ética mais elevada.</p>
+  <section id="logosofia" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h3 class="text-3xl font-bold text-primary mb-4">O que é Logosofia?</h3>
+        <p class="text-gray-700 leading-relaxed">Criada por Carlos Bernardo González Pecotche, a Logosofia é uma ciência de aperfeiçoamento e evolução consciente do ser humano. Por meio do estudo das leis universais, da mente e da vida interna, ela proporciona autoconhecimento, domínio de pensamentos e desenvolvimento de virtudes superiores.</p>
+      </div>
+      <img src="https://source.unsplash.com/600x400/?mind,philosophy" alt="Logosofia" class="rounded shadow">
     </div>
   </section>
 
   <!-- Atividades -->
-  <section id="atividades" class="py-16 bg-gray-100">
-    <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-2xl font-bold text-center mb-8">Atividades</h3>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded shadow">
-          <h4 class="text-lg font-semibold mb-2">Reuniões de Estudo</h4>
-          <p class="text-sm text-gray-600">Encontros semanais com reflexões sobre ensinamentos logosóficos.</p>
+  <section id="atividades" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold text-primary mb-10">Nossas Atividades</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-50 p-6 rounded shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold mb-2">Reuniões de Estudo</h4>
+          <p class="text-gray-600">Reflexões semanais guiadas por ensinamentos logosóficos com espaço para troca de experiências.</p>
         </div>
-        <div class="bg-white p-6 rounded shadow">
-          <h4 class="text-lg font-semibold mb-2">Cursos e Ciclos</h4>
-          <p class="text-sm text-gray-600">Introdução à Logosofia para novos interessados, conduzida por participantes experientes.</p>
+        <div class="bg-gray-50 p-6 rounded shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold mb-2">Cursos Introdutórios</h4>
+          <p class="text-gray-600">Ciclos de introdução à Logosofia voltados a novos interessados no conhecimento consciente.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold mb-2">Leituras Coletivas</h4>
+          <p class="text-gray-600">Encontros para estudo conjunto de livros logosóficos e aprofundamento conceitual.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contato -->
-  <section id="contato" class="py-16 bg-white">
+  <section id="contato" class="py-20 bg-gray-100">
     <div class="max-w-xl mx-auto px-4 text-center">
-      <h3 class="text-2xl font-bold mb-6">Contato</h3>
+      <h3 class="text-3xl font-bold text-primary mb-6">Fale Conosco</h3>
       <form action="https://formsubmit.co/guilhermedoco@gmail.com" method="POST" class="space-y-4">
         <input type="hidden" name="_next" value="https://www.nikelogosofia.com.br/obrigado.html">
         <input type="text" name="nome" placeholder="Nome" class="w-full p-3 border rounded" required>
         <input type="email" name="email" placeholder="E-mail" class="w-full p-3 border rounded" required>
         <textarea name="mensagem" placeholder="Mensagem" rows="4" class="w-full p-3 border rounded" required></textarea>
-        <button class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Enviar</button>
+        <button class="bg-primary text-white px-6 py-3 rounded hover:bg-blue-800">Enviar</button>
       </form>
     </div>
   </section>
 
   <!-- Rodapé -->
-  <footer class="bg-gray-200 text-center py-6 text-sm text-gray-600">
+  <footer class="bg-primary text-white text-center py-6 text-sm">
     <p>&copy; 2025 Centro Logosófico Nike. Todos os direitos reservados.</p>
+    <p><a href="https://www.logosofia.org.br" class="underline hover:text-yellow-300">Fundação Logosófica</a></p>
   </footer>
 </body>
 </html>
